@@ -1,7 +1,6 @@
 import React from 'react'
-import 'weathericons/css/weather-icons.min.css'
+import 'weather-icons-lite/css/weather-icons-lite.css'
 import Todayinfo from'./components/Todayinfo'
-
 class App extends React.Component{
   render(){
     return (
