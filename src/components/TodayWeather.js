@@ -19,12 +19,12 @@ function getWeather(city,country){
 };
 const TodayWeather = (props) => {
     const json_weather = JSON.stringify(getWeather(props.city,props.country));
-    const cos = 'sddsds';
     return(
         <div className="today-weather-div">
             <div>
                 <h1>Today Weather in {props.city},{props.country}</h1>
-                <i className="wi-10x wi wi-darksky-clear-day"/> 
+
+                <i className="wi-5x wi wi-darksky-clear-day"/> 
                 <h2>{json_weather}</h2>
             </div>
         </div>
