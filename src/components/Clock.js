@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 class Clock extends Component{
-    constructor(){
-        super()
-        this.state = {time:new Date()}
+    state = {
+        time:new Date()
     }
+
 
     currentTime(){
         this.setState({
@@ -18,7 +18,7 @@ class Clock extends Component{
     render(){
         return(
             <div className="clock-div">
-                {this.state.time.toTimeString().split(" ")[0]}
+                {this.state.time.toTimeString().split(" ")[0]}  
             </div>
         )
     }
