@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Clock extends Component{
     state = {
-        time:new Date()
+        time: new Date()
     }
 
 
@@ -18,7 +18,8 @@ class Clock extends Component{
     render(){
         return(
             <div className="clock-div">
-                {this.state.time.toTimeString().split(" ")[0]}  
+                <p className="clock-p">{this.state.time.toTimeString().split(" ")[0]}</p>
+                <p className="date-p">{this.state.time.getDate()}.{this.state.time.getMonth()}.{this.state.time.getFullYear()}</p>
             </div>
         )
     }
