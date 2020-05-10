@@ -1,0 +1,56 @@
+body {     
+    background: rgb(121, 107, 107);
+  } 
+
+.today-weather-div{
+    font-size: 20px;
+    position: absolute;   
+    height: 450px;
+    width: 500px;
+    background: rgb(90, 90, 90,0.8);
+    left: calc(50% - 250px);
+    color: white;
+    border-radius: 50px;
+}
+
+.temp-p{
+    position: absolute;
+    font-size: 100px;
+    top: 20px;
+    left: 25px;
+}
+
+.weather-icon-p{ 
+    position: absolute;
+    font-size: 30px;
+    top: 150px;
+    left: 300px;
+}
+.humidity-p{
+    position: absolute;
+    top: 230px;
+}
+.droplet-img{
+    height: 45px;
+    width: 45px;
+}
+.humidity-value{
+    position: absolute;
+    top: -10px;
+    left: 50px;
+}
+.wind-p{
+    position: absolute;
+    top: 230px;
+    left: 5px;
+}
+.max-temp-p{
+    position: absolute;
+    top: 330px;
+    left: 5px;
+}
+.min-temp-p{
+    position: absolute;
+    top: 360px;
+    left: 5px;
+}

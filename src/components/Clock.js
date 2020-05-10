@@ -19,7 +19,7 @@ class Clock extends Component{
         return(
             <div className="clock-div">
                 <p className="clock-p">{this.state.time.toTimeString().split(" ")[0]}</p>
-                <p className="date-p">{this.state.time.getDate()}.{this.state.time.getMonth()}.{this.state.time.getFullYear()}</p>
+                <p className="date-p">{this.state.time.getDate()}.{this.state.time.getMonth()+1}.{this.state.time.getFullYear()}</p>
             </div>
         )
     }

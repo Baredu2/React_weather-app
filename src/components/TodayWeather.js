@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import Droplet from './static/img/droplet.png';
 function getIcon(id){
     if(id === 800){
         return <i className="wi-5x wi wi-darksky-clear-day"/>
@@ -31,13 +30,18 @@ const TodayWeather = (props) => {
             
             <div className="today-weather-div">
                 <div>
-                    <h1>Weather in {props.city}</h1>
-                    <p className="today-date-p">
-                    </p>
+                <center><h1>Weather in {props.city}</h1></center>
                     <p className='temp-p'>{props.temp}&deg;C</p>
-                    {getIcon(props.id)}
+                    <p className='weather-icon-p'>{getIcon(props.id)}</p>
+                    <p className='humidity-p'>
+                    <img className="droplet-img" alt="hum:" src={Droplet}/> <p className="humidity-value">{props.humidity}% </p>          
+                    </p>
+                    <p className='wind-p'>
+                        <p className='wi-2x wi wi-darksky-wind'></p>
+                        {props.wind} Km/h
+                    </p>
                     <p className='max-temp-p'>Max: {props.max}&deg;C</p>
-                    <p className='max-temp-p'>Min: {props.min}&deg;C</p>
+                    <p className='min-temp-p'>Min: {props.min}&deg;C</p>
                     {/* <h2>{json_weather}</h2> */}
                 </div>
             </div>
