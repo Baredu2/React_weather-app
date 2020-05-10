@@ -18,8 +18,8 @@ class Clock extends Component{
     render(){
         return(
             <div className="clock-div">
-                <p className="clock-p">{this.state.time.toTimeString().split(" ")[0]}</p>
-                <p className="date-p">{this.state.time.getDate()}.{this.state.time.getMonth()+1}.{this.state.time.getFullYear()}</p>
+                <span className="clock-p">{this.state.time.toTimeString().split(" ")[0]}</span>
+                <span className="date-p">{this.state.time.getDate()}.{this.state.time.getMonth()+1}.{this.state.time.getFullYear()}</span>
             </div>
         )
     }

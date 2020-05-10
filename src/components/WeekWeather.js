@@ -1,5 +1,6 @@
 import React from 'react';
 import Droplet from './static/img/droplet.png';
+
 function getIcon(id){
     // var time = new Date()
 
@@ -30,22 +31,7 @@ const TodayWeather = (props) => {
     if(props.city !== undefined && props.country !== undefined){
         return(
             
-            <div className="today-weather-div">
-                <div>
-                <center><h1>{props.city}</h1></center>
-                <span className='temp-p'>{props.temp}&deg;C</span>
-                    <span className='weather-icon-p'>{getIcon(props.id)}</span>
-                    <span className='humidity-p'>
-                    <img className="droplet-img" alt="hum:" src={Droplet}/> <span className="humidity-value">{props.humidity}% </span>          
-                    </span>
-                    <span className='wind-p'>
-                        <span className="wind-icon"><p className='wi-2x wi wi-darksky-wind'></p></span>
-                        <span className="wind-value"> {props.wind} Km/h </span>
-                    </span>
-                    <span className='max-temp-p'>Max: {props.max}&deg;C</span>
-                    <span className='min-temp-p'>Min: {props.min}&deg;C</span>
-                    {/* <h2>{json_weather}</h2> */}
-                </div>
+            <div className="week-weather-div">
             </div>
         )
     }else{
