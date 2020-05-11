@@ -1,10 +1,11 @@
 import React from 'react';
 import Droplet from './static/img/droplet.png';
-function getIcon(id){
-    // var time = new Date()
 
+function getIcon(id){ 
+    var day = "day";
     if(id === 800){
-        return <i className="wi-5x wi wi-darksky-clear-day"/>
+        const class_name=`wi-5x wi wi-darksky-clear-${day}`
+        return <i className={class_name}/>
     }else{
         if(id >= 200 && id <= 232 ){
             return <i className="wi-5x wi wi-darksky-thunderstorm"/>
@@ -15,8 +16,13 @@ function getIcon(id){
                 if(id >= 600 && id <= 622){
                     return <i className="wi-5x wi wi-darksky-snow"/>
                 }else{
-                    if(id >= 801 && id <= 804){
+                    if(id > 801 && id <= 804){
                         return <i className="wi-5x wi wi-darksky-cloudy"/>     
+                    }else{
+                        if(id === 801){
+                            const class_name=`wi-5x wi wi-darksky-partly-cloudy-${day}`
+                            return <i className={class_name}/>     
+                        }
                     }
                 }
             }
@@ -44,7 +50,6 @@ const TodayWeather = (props) => {
                     </span>
                     <span className='max-temp-p'>Max: {props.max}&deg;C</span>
                     <span className='min-temp-p'>Min: {props.min}&deg;C</span>
-                    {/* <h2>{json_weather}</h2> */}
                 </div>
             </div>
         )

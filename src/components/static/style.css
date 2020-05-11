@@ -2,18 +2,23 @@ body {
     background: rgb(121, 107, 107);
   } 
 @media screen and (min-width: 1551px) {
-.today-weather-div{left: calc(50% - 250px);top: 40px;}
-.clock-div{left: 5px;top: 40px;}
-.searching-city-div{right: 5px;top: 40px;}
+    .today-weather-div{left: calc(50% - 250px);top: 40px;}
+    .clock-div{left: 5px;top: 40px;}
+    .searching-city-div{right: 5px;top: 40px;}
+    .main-map-div{ right:5px;top: 100px; }
+    #bg-div{height: 100%;width: 100%;}
 }
 @media screen and (max-width: 1550px) {
     .today-weather-div{left: calc(50% - 250px);top: 335px;}
     .clock-div{left: calc(50% - 250px);top: 100px;}
     .searching-city-div{left: calc(50% - 250px);top: 40px;}
+    .main-map-div{ left: calc(50% - 250px); top: 800px; }
+    #bg-div{height: 200%;width: 200%;}
 }
     
 /* Today Weather */
 .today-weather-div{ 
+    z-index: 2;
     font-size: 25px;
     position: absolute;   
     height: 450px;
@@ -27,7 +32,7 @@ body {
     position: absolute;
     font-size: 120px;
     top: 90px;
-    left: 120px;
+    left: 155px;
 }
 
 .weather-icon-p{ 
@@ -86,6 +91,7 @@ body {
     background: rgb(90, 90, 90,0.8);
     color: white;
     border-radius: 50px;
+    z-index: 2;
 }
 .clock-p{
     text-align: center;
@@ -110,6 +116,7 @@ body {
     background: rgb(90, 90, 90,0.8);
     color: white;
     border-radius: 50px;
+    z-index: 2;
 }
 .city-input{
     position: absolute;
@@ -138,4 +145,50 @@ body {
     font-size:15px;
     background-color: rgb(36, 36, 36,0.5);
     border:0;
+}
+/* MAP */
+.main-map-div{
+    position: absolute;
+    height: 500px;
+    width:500px;
+    z-index: -1000;
+}
+
+
+/* Background */
+#bg-div{    
+background-repeat: no-repeat;
+top:0;
+left:0;
+position: absolute;
+z-index: -2000;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.div-sun{
+
+    background-image: url("img/bg/sun.png") ;
+}
+.div-thunderstorm{
+
+    background-image: url("img/bg/thunderstorm.jpg");
+}
+.div-rain{
+
+    background-image: url("img/bg/rain.jpg");
+}
+.div-snow{
+
+    background-image: url("img/bg/snow.jpg");
+}
+.div-clouds{
+
+    background-image: url("img/bg/clouds.jpg") ;
+}
+.div-clouds-day{
+
+    background-image: url("img/bg/clouds-sun.jpg");
 }

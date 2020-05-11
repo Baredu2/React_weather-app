@@ -3,7 +3,8 @@ import 'weather-icons-lite/css/weather-icons-lite.css';
 import Todayinfo from'./components/TodayWeather';
 import Searching from './components/Searching';
 import Clock from './components/Clock';
-import Map from './components/Map';
+import MapLocation from './components/MapLocation';
+import BackGround from './components/BackGround';
 import './components/static/style.css'
 const API_KEY ='7d575bb0365a0d1050ad7490cb098312';
 
@@ -24,7 +25,7 @@ class App extends React.Component{
       humidity: undefined,
       wind_speed: undefined,
       id: undefined,
-      error: undefined
+      sunset: undefined
     }
     this.getLocation = this.getLocation.bind(this);
     this.getCoordinates = this.getCoordinates.bind(this);  
@@ -52,10 +53,9 @@ class App extends React.Component{
       humidity: data.main.humidity,
       wind_speed: Math.round(data.wind.speed*3.6),
       id: data.weather[0].id,
-      error: ""
+      sunset: data.sys.sunset
     })
   }
-  console.log(this.state.location)
 }
 
   getLocation(){
@@ -86,6 +86,7 @@ class App extends React.Component{
       humidity: data.main.humidity,
       wind_speed: Math.round(data.wind.speed*3.6),  
       id: data.weather[0].id,
+      sunset: data.sys.sunset
       })
       
   }
@@ -94,11 +95,12 @@ class App extends React.Component{
     return (
         <div>
             {this.getLocation()}
+            <BackGround id={this.state.id}/>
             <Searching getTodayWeather={this.getTodayWeather} getLocation={this.getLocation}/> 
-            <Todayinfo wind={this.state.wind_speed} temp={this.state.temperature} max={this.state.max} min={this.state.min} city={this.state.city} country={this.state.country} humidity={this.state.humidity} id = {this.state.id}/>
+            <Todayinfo sunset = {this.state.sunset} wind={this.state.wind_speed} temp={this.state.temperature} max={this.state.max} min={this.state.min} city={this.state.city} country={this.state.country} humidity={this.state.humidity} id = {this.state.id}/>
             <Clock/>
-            <Map/>
-        </div>
+            <MapLocation location = {this.state.location}/>
+          </div>
     )
    };
 }

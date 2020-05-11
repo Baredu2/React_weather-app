@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Clock extends Component{
+class Clock extends React.Component{
     state = {
         time: new Date()
     }
