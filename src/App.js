@@ -5,8 +5,9 @@ import Searching from './components/Searching';
 import Clock from './components/Clock';
 import MapLocation from './components/MapLocation';
 import BackGround from './components/BackGround';
-import './components/static/style.css'
-const API_KEY ='7d575bb0365a0d1050ad7490cb098312';
+import './components/static/style.css'; 
+
+const API_KEY = '7d575bb0365a0d1050ad7490cb098312';
 
 class App extends React.Component{
   constructor(){

@@ -1,7 +1,6 @@
 import React from 'react';
 var style= "div-sun";
 function getBg(id){ 
-    var day = "day";
     if(id === 800){
         style= "div-sun";
         return style
