@@ -6,8 +6,8 @@ class Searching extends React.Component{
         return(
             <div className="searching-city-div">
                 <form onSubmit={this.props.getTodayWeather}>
-                    <input className="city-input" type="text" name="city" placeholder="City..."/>
-                    <input className="country-input" type="text" name="country" placeholder="Country..."/>
+                    <input className="city-input" type="text" name="city" placeholder="City..." required />
+                    <input className="country-input" type="text" name="country" placeholder="Country..." required/>
                     <button className="button-city" >Get Weather</button>
                 </form> 
             </div>            
