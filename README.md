@@ -30,5 +30,5 @@ Project is created with:
 
 
 ## Setup
-To run this project, download it and type: `npm install` and next: `npm start`
+To run this project, download it and type: `npm install` and next: `npm start` in main folder of project.
 
