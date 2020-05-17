@@ -16,7 +16,7 @@ Simple react weather app, created in Node.js<br><br>
 <img width="500" height="800" src="https://github.com/KrEron/React_weather-app/blob/master/website3.PNG">
   </p>
   </html>
-<h2> Technologies </h2>
+## Technologies
 Project is created with:
 <ul>
 <li> css-loader version: ^3.5.3</li>
